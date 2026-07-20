@@ -40,7 +40,7 @@ const Experience = () => {
     },
     {
       role: 'Software Development Intern',
-      company: 'Cognizant Technologies',
+      company: 'Cognifyz Technologies',
       date: 'June 2025 - July 2025',
       points: [
         'Contributed to real-world software projects by writing and reviewing clean code, fixing bugs, and improving overall code coverage.',
@@ -49,7 +49,7 @@ const Experience = () => {
     },
     {
       role: 'Data Analytics Intern',
-      company: 'BeTech Pvt. Ltd.',
+      company: 'ReTech Pvt. Ltd.',
       date: '2024',
       points: [
         'Analyzed and cleaned massive structured datasets using Excel, SQL, and Python to drive business performance intelligence.',
