@@ -44,7 +44,7 @@ const Projects = () => {
       title: "NxtTrend E-commerce",
       category: "React Project",
       description:
-        "A responsive e-commerce application featuring authentication, routing, product search, filtering, and protected pages.",
+        "A responsive e-commerce application featuring authentication, routing, product search, filtering, and protected pages. **UserName:rahul** **password:rahul@2021**",
       features: [
         "JWT authentication",
         "Search & filtering",
