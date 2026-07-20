@@ -1,0 +1,190 @@
+import React from "react";
+import { ExternalLink } from "lucide-react";
+
+const GithubIcon = ({ size = 16 }) => (
+  <svg
+    viewBox="0 0 24 24"
+    width={size}
+    height={size}
+    fill="none"
+    stroke="currentColor"
+    strokeWidth="2"
+    strokeLinecap="round"
+    strokeLinejoin="round"
+  >
+    <path d="M15 22v-4a4.8 4.8 0 0 0-1-3.5c3 0 6-2 6-5.5.08-1.25-.27-2.48-1-3.5.28-1.15.28-2.35 0-3.5 0 0-1 0-3 1.5-2.64-.5-5.36-.5-8 0C6 2 5 2 5 2c-.3 1.15-.3 2.35 0 3.5A5.403 5.403 0 0 0 4 9c0 3.5 3 5.5 6 5.5-.39.49-.68 1.05-.85 1.65-.17.6-.22 1.23-.15 1.85v4" />
+    <path d="M9 18c-4.51 2-5-2-7-2" />
+  </svg>
+);
+
+const Projects = () => {
+  const projects = [
+    {
+      title: "NCERT StudyBot",
+      category: "AI Chatbot",
+      description:
+        "A multilingual AI chatbot built with React, Express.js, and Gemini API to provide textbook-aligned educational assistance.",
+      features: [
+        "React frontend with modern chat interface",
+        "Express.js backend with Gemini API integration",
+        "Deployed on Vercel and Render",
+      ],
+      tags: [
+        "React",
+        "Node.js",
+        "Express.js",
+        "Gemini API",
+        "Vercel",
+        "Render",
+      ],
+      github: "https://github.com/SudharDeveloper",
+      demo: "",
+    },
+    {
+      title: "NxtTrend E-commerce",
+      category: "React Project",
+      description:
+        "A responsive e-commerce application featuring authentication, routing, product search, filtering, and protected pages.",
+      features: [
+        "JWT authentication",
+        "Search & filtering",
+        "React Router navigation",
+      ],
+      tags: ["React", "JWT", "React Router", "REST API", "CSS"],
+      github: "https://github.com/SudharDeveloper",
+      demo: "https://sudhardeveloper.github.io/NxtTrend/",
+    },
+    {
+      title: "Cricket Scorer App",
+      category: "Web Application",
+      description:
+        "A live cricket scoring application supporting configurable matches and advanced score management.",
+      features: [
+        "Ball-by-ball scoring",
+        "Undo & redo support",
+        "Custom match rules",
+      ],
+      tags: ["React", "State Management", "Hooks", "Lovable"],
+      github: "https://github.com/SudharDeveloper",
+      demo: "sixer-scribe.lovable.app",
+    },
+    {
+      title: "IRIS & Telegram Bot",
+      category: "Computer Vision",
+      description:
+        "A YOLOv8 safety monitoring system integrated with Arduino alongside a Telegram bot for automated file conversion.",
+      features: [
+        "YOLOv8 object detection",
+        "Arduino integration",
+        "Python Telegram automation",
+      ],
+      tags: ["Python", "YOLOv8", "Arduino", "Telegram Bot"],
+      github: "https://github.com/SudharDeveloper",
+      demo: "https://www.linkedin.com/posts/sudharsan-venkatesan-_reimaginesafety-iot-embeddedsystems-activity-7443333996924747777-B-KG?utm_source=share&utm_medium=member_desktop&rcm=ACoAAE6DkOMByg1BSDBkLOkmGozlEQI2pDfD18I",
+    },
+  ];
+
+  return (
+    <section id="projects" className="section">
+      <div className="container">
+        <h2 className="section-title">Key Projects</h2>
+
+        <p
+          style={{
+            maxWidth: "700px",
+            margin: "0 auto 50px",
+            textAlign: "center",
+            color: "var(--text-secondary)",
+          }}
+        >
+          A showcase of AI applications, full-stack web solutions, and software
+          projects built using modern technologies.
+        </p>
+
+        <div className="projects-grid">
+          {projects.map((project) => (
+            <div className="project-card" key={project.title}>
+              <div className="project-content">
+                <span
+                  style={{
+                    color: "var(--accent)",
+                    fontSize: "0.8rem",
+                    fontWeight: 600,
+                    textTransform: "uppercase",
+                    letterSpacing: "1px",
+                  }}
+                >
+                  {project.category}
+                </span>
+
+                <h3 className="project-title">{project.title}</h3>
+
+                <p className="project-description">
+                  {project.description}
+                </p>
+
+                <ul
+                  style={{
+                    listStyle: "disc",
+                    paddingLeft: "18px",
+                    color: "var(--text-secondary)",
+                    marginBottom: "20px",
+                  }}
+                >
+                  {project.features.map((feature) => (
+                    <li
+                      key={feature}
+                      style={{
+                        marginBottom: "8px",
+                        lineHeight: 1.6,
+                      }}
+                    >
+                      {feature}
+                    </li>
+                  ))}
+                </ul>
+
+                <div className="project-tags">
+                  {project.tags.map((tag) => (
+                    <span className="project-tag" key={tag}>
+                      {tag}
+                    </span>
+                  ))}
+                </div>
+
+                <div
+                  className="project-links"
+                  style={{
+                    marginTop: "20px",
+                    display: "flex",
+                    gap: "15px",
+                  }}
+                >
+                  <a
+                    href={project.github}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="project-link"
+                  >
+                    <GithubIcon size={16} /> Code
+                  </a>
+
+                  <a
+                    href={project.demo}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="project-link"
+                  >
+                    <ExternalLink size={16} /> Live Demo
+                  </a>
+                </div>
+              </div>
+            </div>
+          ))}
+        </div>
+      </div>
+    </section>
+  );
+};
+
+export default Projects;
